@@ -3,3 +3,6 @@ https://docs.trychroma.com/docs/overview/getting-started#1-install
 
 LANGCHAIN OLLAMA
 https://reference.langchain.com/python/integrations/langchain_ollama/#langchain_ollama
+
+TF-IDF VECTORIZER
+https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html

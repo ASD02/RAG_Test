@@ -47,7 +47,26 @@ def ingest_markdown(collection, markdown_content, source_filename):
     if not markdown_content:
         return
     
-    chunks = [chunk.strip() for chunk in markdown_content.split('\n\n') if chunk.strip()]
+    paragraphs = [chunk.strip() for chunk in markdown_content.split('\n\n') if chunk.strip()]
+    
+    chunks = []
+    max_chunk_size = 300
+    
+    for para in paragraphs:
+        if len(para) <= max_chunk_size:
+            chunks.append(para)
+        else:
+            sentences = para.split('. ')
+            current_chunk = ""
+            for sentence in sentences:
+                if len(current_chunk) + len(sentence) + 2 <= max_chunk_size:
+                    current_chunk += sentence + ". " if current_chunk else sentence
+                else:
+                    if current_chunk:
+                        chunks.append(current_chunk.strip())
+                    current_chunk = sentence + ". "
+            if current_chunk:
+                chunks.append(current_chunk.strip())
     
     for i, chunk in enumerate(chunks):
         if len(chunk) < 10:

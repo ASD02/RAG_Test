@@ -16,3 +16,6 @@ test_documents/
 
 # Environment
 .env
+
+#json
+*.json

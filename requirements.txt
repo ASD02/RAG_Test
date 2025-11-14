@@ -1,3 +1,4 @@
 chromadb
 PyPDF2
 langchain-ollama
+scikit-learn
