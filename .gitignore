@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+
+# Virtual environments
+venv/
+env/
+.venv
+
+# ChromaDB
+chroma_db/
+*.sqlite3
+*.db
+
+# Test documents
+test_documents/
+
+# Environment
+.env

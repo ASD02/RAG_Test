@@ -1,0 +1,5 @@
+CHROMA DB
+https://docs.trychroma.com/docs/overview/getting-started#1-install
+
+LANGCHAIN OLLAMA
+https://reference.langchain.com/python/integrations/langchain_ollama/#langchain_ollama
